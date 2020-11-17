@@ -13,7 +13,7 @@ import Pokemon from './Views/Pokemon';
 
 function App() {
   return (
-    <div>
+    <div className="relative pb-10 min-h-screen">
       <Router>
         <Header />
 

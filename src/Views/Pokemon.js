@@ -53,7 +53,7 @@ function Pokemon() {
                 <img
                     src={pokemon.data.sprites.other['official-artwork'].front_default}
                     alt={pokemon.data.name}
-                    className="w-1/4"
+                    className=""
                 />
             </div>
             
