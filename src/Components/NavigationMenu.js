@@ -28,11 +28,11 @@ function NavigationMenu(props) {
                 </li>
                 <li>
                     <Link
-                        to="/space"
+                        to="/pokemon"
                         className="text-blue-500 py-3 border-b block"
                         onClick={props.closeMenu}
                     >
-                        Space
+                        Pokemon
                     </Link>
                 </li>
                 <li>

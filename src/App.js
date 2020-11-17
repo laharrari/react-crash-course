@@ -9,7 +9,7 @@ import Footer from './Components/Footer';
 import Home from './Views/Home';
 import About from './Views/About';
 import Contact from './Views/Contact';
-import Space from './Views/Space';
+import Pokemon from './Views/Pokemon';
 
 function App() {
   return (
@@ -27,8 +27,8 @@ function App() {
               <About />
             </Route>
 
-            <Route path="/space/:idx">
-              <Space />
+            <Route path="/pokemon/:id">
+              <Pokemon />
             </Route>
 
             <Route path="/contact">
