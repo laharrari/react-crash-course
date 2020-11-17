@@ -27,7 +27,7 @@ function App() {
               <About />
             </Route>
 
-            <Route path="/space">
+            <Route path="/space/:idx">
               <Space />
             </Route>
 
