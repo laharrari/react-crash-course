@@ -23,12 +23,12 @@ function App() {
               <Home />
             </Route>
 
-            <Route path="/about">
-              <About />
-            </Route>
-
             <Route path="/pokemon/:id">
               <Pokemon />
+            </Route>
+
+            <Route path="/about">
+              <About />
             </Route>
 
             <Route path="/contact">

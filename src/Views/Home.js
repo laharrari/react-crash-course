@@ -1,39 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import Loader from '../Components/Loader';
 import PokemonCard from '../Components/PokemonCard';
+import useAxiosGet from '../Hooks/HttpRequests';
 
 function Home() {
     const url = `https://pokeapi.co/api/v2/pokemon?limit=15`;
-    const [pokemons, setPokemons] = useState({
-        loading: false,
-        data: null,
-        error: false
-    });
+
+    let pokemons = useAxiosGet(url);
 
     let content = null;
-
-    useEffect(() => {
-        setPokemons({
-            loading: true,
-            data: null
-        });
-        axios.get(url)
-            .then(response => {
-                setPokemons({
-                    loading: false,
-                    data: response.data,
-                    error: false
-                });
-            })
-            .catch(() => {
-                setPokemons({
-                    loading: false,
-                    data: null,
-                    error: true
-                });
-            });
-    }, [url]);
 
     if (pokemons.error) {
         content = <p>There was an error, refresh or try again later.</p>

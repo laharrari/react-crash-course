@@ -1,40 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import Loader from '../Components/Loader';
+import useAxiosGet from '../Hooks/HttpRequests';
 
 function Pokemon() {
     const { id } = useParams();
     const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
-    const [pokemon, setPokemon] = useState({
-        loading: false,
-        data: null,
-        error: false
-    });
+    
+    let pokemon = useAxiosGet(url);
     
     let content = null;
-
-    useEffect(() => {
-        setPokemon({
-            loading: true,
-            data: null
-        });
-        axios.get(url)
-            .then(response => {
-                setPokemon({
-                    loading: false,
-                    data: response.data,
-                    error: false
-                });
-            })
-            .catch(() => {
-                setPokemon({
-                    loading: false,
-                    data: null,
-                    error: true
-                });
-            });
-    }, [url]);
 
     if (pokemon.error) {
         content = <p>There was an error, refresh or try again later.</p>

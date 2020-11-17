@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function CounterExample() {
+export function CounterExample() {
     const [count, setCount] = useState(0);
 
     return (
@@ -17,5 +17,3 @@ function CounterExample() {
         </div>
     );
 }
-
-export default CounterExample;

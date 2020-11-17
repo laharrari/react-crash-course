@@ -19,20 +19,20 @@ function NavigationMenu(props) {
                 </li>
                 <li>
                     <Link
-                        to="/about"
-                        className="text-blue-500 py-3 border-b block"
-                        onClick={props.closeMenu}
-                    >
-                        About
-                    </Link>
-                </li>
-                <li>
-                    <Link
                         to="/pokemon"
                         className="text-blue-500 py-3 border-b block"
                         onClick={props.closeMenu}
                     >
                         Pokemon
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        to="/about"
+                        className="text-blue-500 py-3 border-b block"
+                        onClick={props.closeMenu}
+                    >
+                        About
                     </Link>
                 </li>
                 <li>
